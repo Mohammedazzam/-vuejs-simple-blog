@@ -48,7 +48,7 @@ export default {
           axios.get(`http://localhost:3000/blog?_page=${page}&_limit=6`).then((res)=>{//('http://localhost:3000/blog')    ('http://localhost:3000/blog?_page=2&_limit=6')
 
       // console.log(res.data)
-      this.blogs = res.data
+      this.blogs = this.blogs ? this.blogs.concat(res.data) : res.data;
     })
     },
     loadeMore(){
