@@ -30,7 +30,8 @@ export default {
     BlogCard
   },
   mounted(){
-    axios.get('http://localhost:3000/blog').then((res)=>{
+    axios.get('http://localhost:3000/blog?_page=1&_limit=6').then((res)=>{//('http://localhost:3000/blog')    ('http://localhost:3000/blog?_page=2&_limit=6')
+
       // console.log(res.data)
       this.blogs = res.data
     })
