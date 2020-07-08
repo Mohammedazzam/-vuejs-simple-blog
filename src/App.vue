@@ -1,16 +1,26 @@
 <template>
   <div id="app">
     <app-header></app-header>
+
+    <div class="container"> 
+
+      <blog-card></blog-card>
+      <blog-card></blog-card>
+      <blog-card></blog-card>
+      <blog-card></blog-card>
+    </div>
   </div>
 </template>
 
 <script>
 import AppHeader from './components/app-header'
+import BlogCard from './components/blog-card'
 
 export default {
   name: 'App',
   components: {
-    AppHeader
+    AppHeader,
+    BlogCard
   }
 }
 </script>
@@ -22,4 +32,9 @@ body{
   margin: 0;
 }
 
+.container{
+  padding: 0 30px;
+  max-width: 1024px;
+  margin: auto;
+}
 </style>
