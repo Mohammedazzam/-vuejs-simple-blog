@@ -12,7 +12,12 @@
     </div>
 
     <div class="text-center">
-      <button type="button" class="load-more-button" @click="loadeMore">
+      <button
+        type="button"
+        class="load-more-button"
+        @click="loadeMore"
+        v-if="blogs && blogs.length < totalCount"
+        >
       Load More
       </button>
     </div>
@@ -31,7 +36,8 @@ export default {
   data(){
     return{
       blogs:null,
-      page:1
+      page:1,
+      totalCount : null
     }
   },
   components: {
@@ -49,6 +55,8 @@ export default {
 
       // console.log(res.data)
       this.blogs = this.blogs ? this.blogs.concat(res.data) : res.data;
+      this.totalCount = res.headers['x-total-count'];
+      // console.log(res.headers['x-total-count']);
     })
     },
     loadeMore(){
