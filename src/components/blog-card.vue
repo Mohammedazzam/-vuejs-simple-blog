@@ -2,17 +2,17 @@
     <div class="blog-card">
 
         <div class="card-image">
-            <img src="../assets/blog-image.jpg" alt="artical title">
+            <img :src="data.image" alt="artical title">
         </div>
 
         <div class="card-content">
 
             <h2 class="card-title">
-                artical title
+                {{data.title}}
             </h2>
 
             <p class="card-summary">
-                Sumary Hear  Sumary Hear Sumary Hear Sumary Hear Sumary Hear
+                {{data.summary}}
             </p>
 
             <a href="" class="read-more">
@@ -68,6 +68,10 @@
 
 <script>
 export default {
-    
+    props:{
+        data:{
+           required:true 
+        }
+    }
 }
 </script>

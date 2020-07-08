@@ -6,7 +6,7 @@
 
       <blog-card
        v-for="blog in blogs" :key="blog.id"
-       ></blog-card>
+       :data="blog"></blog-card>
 
 
     </div>
