@@ -8,6 +8,7 @@
       <blog-card></blog-card>
       <blog-card></blog-card>
       <blog-card></blog-card>
+      
     </div>
   </div>
 </template>
@@ -36,5 +37,8 @@ body{
   padding: 0 30px;
   max-width: 1024px;
   margin: auto;
+  display: flex;
+  flex-wrap:wrap ;
+
 }
 </style>
