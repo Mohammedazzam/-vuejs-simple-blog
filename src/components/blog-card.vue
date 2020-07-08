@@ -2,7 +2,9 @@
     <div class="blog-card">
 
         <div class="card-image">
-            <img :src="data.image" alt="artical title">
+            <div class="ratio-content">
+                <img :src="data.image" alt="artical title">
+            </div>
         </div>
 
         <div class="card-content">
@@ -39,9 +41,27 @@
     }
 
     .card-image{
+        position: relative;//عشان يكون ماخد المساحة تبعتو
+        &::before{
+            content: '';
+            display: block;
+            padding-top:66.5% ;
+        }
+
+        .ratio-content{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden; //عشان لو الصورة أكبر منها تختفي
+            border-radius: 5px;
+
+        }
+
         img{
             width: 100%;
-            border-radius: 5px;
+            min-width: 100%;
         }
     }
     .card-title{
