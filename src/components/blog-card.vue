@@ -17,9 +17,11 @@
                 {{data.summary}}
             </p>
 
-            <a href="" class="read-more">
-                Continue reading
-            </a>
+            <router-link :to="`/blog/${data.id}`" class="read-more">
+            Continue reading
+            </router-link>
+
+
 
         </div>
     </div>
