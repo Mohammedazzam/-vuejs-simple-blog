@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h1>Blog</h1>
+        ,<slot></slot>
     </header>
 </template>
 

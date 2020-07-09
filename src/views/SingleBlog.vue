@@ -1,12 +1,22 @@
 <template>
     <div v-if="blog">
-        <p>{{blog.title}}</p>
+    <app-header>
+      <h1>
+        {{blog.title}}
+      </h1>
+    </app-header>
     </div>
 </template>
 
 <script>
+
+import AppHeader from '../components/app-header'
 import axios from 'axios';
+
 export default {
+    components:{
+        AppHeader
+    },
     data(){
         return{
             blog:null
