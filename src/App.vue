@@ -20,14 +20,7 @@ body{
   margin: 0;
 }
 
-.container{
-  padding: 0 30px;
-  max-width: 1024px;
-  margin: auto;
-  display: flex;
-  flex-wrap:wrap ;
 
-}
 .text-center{
   text-align: center;
 }

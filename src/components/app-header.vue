@@ -32,12 +32,26 @@
     }
   }
 
-  h1 {
+ h1 {
     position: relative;
     margin: 0;
     color: #fff;
     font-weight: 300;
     font-size: 60px;
+  }
+  .back-button{
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    padding: 7px 15px;
+    line-height: 1;
+    &:hover{
+      background-color: rgba(255,255,255,0.2);
+    }
   }
 </style>
 
